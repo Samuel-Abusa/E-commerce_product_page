@@ -20,7 +20,7 @@ export class SneakerImageComponent implements OnInit {
     );
   }
 
-  // selectImg(img: HTMLImageElement) {}
+  selectImg(img: HTMLImageElement) {}
 
   switchImg(img: HTMLImageElement, e: Event) {
     let imgSelector = +img.src
