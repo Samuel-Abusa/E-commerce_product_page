@@ -1,5 +1,6 @@
 .sneaker-main {
   width: 62%;
+  position: relative;
 }
 @media (max-width: 991.5px) {
   .sneaker-main {
@@ -10,6 +11,23 @@
 .main-img {
   border-radius: 1.6rem;
   cursor: pointer;
+}
+.btns {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.carousel-btn {
+  border-radius: 50%;
+  height: 2.2rem;
+  width: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.carousel-btn img {
+  max-height: 0.7rem;
 }
 
 .active-img {

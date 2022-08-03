@@ -22,11 +22,9 @@ export class ImageModalComponent implements OnInit {
           .split('.')
           .filter((str: string) => isNaN(+str) === false)[0])
     );
+
+    this.imageService.currImage.subscribe(
+      (imgData) => (this.currentModalImage = `${+imgData.id + 1}`)
+    );
   }
-  ngAfterViewInit() {
-    // const def = [...this.container?.nativeElement.children];
-    // console.log(def);
-  }
-  // showChildren() {
-  // }
 }
