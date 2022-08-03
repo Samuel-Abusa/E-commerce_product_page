@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-between thumb-cont">
+  <div
+    *ngFor="let img of sneakerImgThumb; let i = index"
+    class="d-flex justify-content-center"
+  >
+    <img
+      [src]="img"
+      [id]="i"
+      class="img-fluid thumb"
+      #curImg
+      (click)="selectImg(curImg)"
+    />
+  </div>
+</div>

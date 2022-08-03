@@ -1,0 +1,29 @@
+.sneaker-main {
+  width: 62%;
+}
+@media (max-width: 991.5px) {
+  .sneaker-main {
+    width: 100%;
+  }
+}
+
+.main-img {
+  border-radius: 1.6rem;
+  cursor: pointer;
+}
+
+.active-img {
+  border: solid 2px #fe7d1d;
+}
+
+@media (min-width: 528px) and (max-width: 768px) {
+  .main-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 766px) {
+  .main-img {
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,14 @@
+.modal-content {
+  background: none;
+  border: none;
+}
+.modal-header,
+.modal-footer {
+  border: none;
+}
+.close img {
+  height: 1.5rem;
+}
+.selected-img {
+  border-radius: 1.6rem;
+}

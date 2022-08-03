@@ -1,0 +1,22 @@
+<div class="sneaker-main">
+  <img
+    #img
+    [src]="mainSneakerImg"
+    (click)="setMainModalImage(img)"
+    class="img-fluid main-img mb-md-4"
+    data-bs-toggle="modal"
+    data-bs-target="#image-modal"
+  />
+
+  <app-image-thumb class="d-none d-md-block" #imgs></app-image-thumb>
+</div>
+
+<app-image-modal
+  id="image-modal"
+  class="modal fade"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+></app-image-modal>

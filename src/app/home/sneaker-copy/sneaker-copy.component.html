@@ -1,0 +1,37 @@
+<div class="mt-xl-5 pt-xl-3 w-75">
+  <h1 class="h6 mb-4">SNEAKER COMPANY</h1>
+  <h2 class="h1">Fall Limited Edition Sneakers</h2>
+  <p class="sneaker-copy">
+    These low-profile sneakers are your perfect casual wear companion. Featuring
+    a durable rubber outer sole, they'll withstand everything the weather can
+    offer
+  </p>
+  <h2 class="d-flex align-items-center">
+    <strong>${{ price }}.00</strong> <span class="badge">50%</span>
+  </h2>
+
+  <strong class="canceled text-muted">$250.00</strong>
+
+  <div class="row mt-lg-5 d-flex align-items-center">
+    <div class="col-md-4">
+      <div class="multiplier d-flex py-2 px-1">
+        <a class="minus" (click)="count($event)">
+          <img src="../../../assets/images/icon-minus.svg" />
+        </a>
+        <p class="counter m-0">
+          <strong>{{ counter }}</strong>
+        </p>
+        <a class="add" (click)="count($event)">
+          <img src="../../../assets/images/icon-plus.svg" />
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <button class="btn add-to-cart w-100 py-2" (click)="addToCart()">
+        <img src="../../../assets/images/add-cart.svg" />
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>
