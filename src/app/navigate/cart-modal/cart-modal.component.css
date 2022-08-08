@@ -1,0 +1,36 @@
+.modal-dialog {
+  margin-right: 0;
+}
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin-right: auto;
+  }
+}
+
+.bin {
+  cursor: pointer;
+}
+.modal-content {
+  border: none;
+  box-shadow: -3px 25px 26px 0px rgba(0, 0, 0, 0.15);
+}
+
+.modal-description {
+  color: #8f9095;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  flex-basis: 75%;
+}
+
+.cart-img {
+  max-width: 3rem;
+  border-radius: 0.2rem;
+}
+.btn {
+  background: #ea8233;
+  color: white;
+}
+.price {
+  color: black;
+  font-weight: 600;
+}

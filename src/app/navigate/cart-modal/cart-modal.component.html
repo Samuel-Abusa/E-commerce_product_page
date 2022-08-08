@@ -1,0 +1,42 @@
+<div class="container pt-2 mt-5">
+  <div class="modal-dialog" #modal>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="exampleModalLabel">
+          <strong>Cart</strong>
+        </h6>
+      </div>
+      <div class="modal-body" *ngIf="items! > 0; else empty">
+        <div class="d-flex align-items-center">
+          <img
+            src="../../../assets/images/image-product-1-thumbnail.jpg"
+            class="img-fluid cart-img"
+          />
+          <div
+            class="modal-description d-flex align-items-center justify-content-center px-2"
+          >
+            <p>
+              Fall Limited Edition Sneakers $125.00 &times; {{ items }}
+              <strong class="price"> ${{ 125 * items! }} </strong>
+            </p>
+          </div>
+          <img
+            src="../../../assets/images/icon-delete.svg"
+            class="img-fluid bin"
+            (click)="deleteItem()"
+          />
+        </div>
+
+        <div class="d-grid col-12 mt-4">
+          <button class="btn" type="button" (click)="checkout()">
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #empty class="modal-body py-5">
+  <h6 class="py-5 text-center text-muted">Your cart is empty</h6>
+</ng-template>

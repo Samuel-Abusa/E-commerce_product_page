@@ -8,6 +8,10 @@
   cursor: pointer;
 }
 
+.modal-toogler {
+  cursor: pointer;
+}
+
 .badge {
   background: #fe7d1d;
 }

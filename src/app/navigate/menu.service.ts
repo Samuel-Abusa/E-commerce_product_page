@@ -7,7 +7,6 @@ import { Subject } from 'rxjs';
 export class MenuService {
   close = new Subject<{ menu: string; background: HTMLDivElement }>();
   items = 0;
-  itemsInCart = 0;
   updateItems = new Subject<number>();
   addCartItems = new Subject<number>();
 

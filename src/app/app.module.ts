@@ -12,6 +12,7 @@ import { SneakerCopyComponent } from './home/sneaker-copy/sneaker-copy.component
 import { ImageModalComponent } from './home/sneaker-image/image-modal/image-modal.component';
 import { ImageThumbComponent } from './home/sneaker-image/image-thumb/image-thumb.component';
 import { SwitchButtonsComponent } from './home/sneaker-image/switch-buttons/switch-buttons.component';
+import { CartModalComponent } from './navigate/cart-modal/cart-modal.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,11 @@ import { SwitchButtonsComponent } from './home/sneaker-image/switch-buttons/swit
     SneakerCopyComponent,
     ImageModalComponent,
     ImageThumbComponent,
-    SwitchButtonsComponent
+    SwitchButtonsComponent,
+    CartModalComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

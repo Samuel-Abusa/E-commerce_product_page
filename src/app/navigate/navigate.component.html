@@ -19,7 +19,10 @@
     </ul>
   </div>
   <div class="my-2 my-lg-0 d-flex justify-content-between align-items-center">
-    <a href="#" class="position-relative"
+    <a
+      class="modal-toogler position-relative"
+      data-bs-toggle="modal"
+      data-bs-target="#cartModal"
       ><img src="../../assets/images/icon-cart.svg" class="img-fluid" />
       <span
         class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
@@ -29,7 +32,7 @@
         <span class="visually-hidden">unread messages</span>
       </span>
     </a>
-    <a href="#"
+    <a class="modal-toogler" data-bs-toggle="modal" data-bs-target="#cartModal"
       ><img
         src="../../assets/images/image-avatar.png"
         class="img-fluid image-avatar"
@@ -38,3 +41,10 @@
 </nav>
 
 <app-slide-menu class="slide-menu" [nav]="navigation"></app-slide-menu>
+<app-cart-modal
+  class="modal fade"
+  id="cartModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+></app-cart-modal>

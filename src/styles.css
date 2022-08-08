@@ -1,5 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+* {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
 @media (max-width: 768px) {
   .bottom {
     margin-bottom: 1.5rem;
   }
+}
+
+.fade {
+  background: none;
 }
