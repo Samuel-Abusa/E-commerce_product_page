@@ -1,21 +1,12 @@
 <div class="sneaker-main">
-  <div
-    class="btns d-md-none d-flex justify-content-between align-items-center px-3"
-  >
-    <button class="carousel-btn previous" (click)="switchImg(img, $event)">
-      <img src="../../../assets/images/icon-previous.svg" class="img-fluid" />
-    </button>
-    <button class="carousel-btn next" (click)="switchImg(img, $event)">
-      <img src="../../../assets/images/icon-next.svg" class="img-fluid" />
-    </button>
-  </div>
+  <app-switch-buttons [img]="mainImg" class="d-md-none"></app-switch-buttons>
   <img
-    #img
+    #mainImg
     [src]="mainSneakerImg"
-    (click)="setMainModalImage(img)"
     class="img-fluid main-img mb-md-4"
     data-bs-toggle="modal"
     data-bs-target="#image-modal"
+    (click)="setActiveModalThumb()"
   />
 
   <app-image-thumb class="d-none d-md-block" #imgs></app-image-thumb>

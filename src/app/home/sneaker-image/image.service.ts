@@ -5,18 +5,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ImageService {
+  switchImage = new Subject<string>();
   currImage = new Subject<HTMLImageElement>();
-  mainModalImage = new Subject<HTMLImageElement>();
+  defaultImg = new Subject<number>();
+  updateButtonWithThumbnail = new Subject<number>();
 
   constructor() {}
 
-  imgSelector(
-    img: HTMLImageElement,
-    relativeToFileLocation: string,
-    mainImg: string
-  ) {
-    mainImg = `${relativeToFileLocation}assets/images/image-product-${
-      +img.id + 1
-    }.jpg`;
+  showImgSrcNumber(src: string) {
+    return src
+      .split('/')
+      .splice(-1, 1)[0]
+      .split('-')
+      .splice(-1, 1)[0]
+      .split('.')[0];
   }
 }

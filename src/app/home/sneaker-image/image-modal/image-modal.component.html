@@ -1,12 +1,14 @@
 <div class="modal-dialog">
   <div class="modal-content">
-    <div class="modal-header d-flex justify-content-end p-0">
+    <div class="modal-header d-flex justify-content-end px-0">
       <button type="button" class="btn close" data-bs-dismiss="modal">
         <img src="../../../../assets/images/icon-close.svg" alt="" />
       </button>
     </div>
-    <div class="modal-body">
+    <div class="modal-body p-0">
+      <app-switch-buttons [img]="mainModalImg"></app-switch-buttons>
       <img
+        #mainModalImg
         src="../../../../assets/images/image-product-{{
           currentModalImage
         }}.jpg"

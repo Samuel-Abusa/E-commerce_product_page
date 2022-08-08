@@ -3,3 +3,7 @@
   cursor: pointer;
   border-radius: 0.5rem;
 }
+
+.active-img {
+  opacity: 0.3;
+}

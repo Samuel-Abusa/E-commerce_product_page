@@ -1,14 +1,15 @@
-<div class="d-flex justify-content-between thumb-cont">
+<div class="d-flex justify-content-between thumb-cont" #container>
   <div
     *ngFor="let img of sneakerImgThumb; let i = index"
-    class="d-flex justify-content-center"
+    class="d-flex justify-content-center img-{{ i + 1 }}"
+    #thumb
   >
     <img
       [src]="img"
       [id]="i"
-      class="img-fluid thumb"
       #curImg
-      (click)="selectImg(curImg)"
+      class="img-fluid thumb"
+      (click)="selectImg(curImg, thumb)"
     />
   </div>
 </div>

@@ -11,6 +11,7 @@ import { SneakerImageComponent } from './home/sneaker-image/sneaker-image.compon
 import { SneakerCopyComponent } from './home/sneaker-copy/sneaker-copy.component';
 import { ImageModalComponent } from './home/sneaker-image/image-modal/image-modal.component';
 import { ImageThumbComponent } from './home/sneaker-image/image-thumb/image-thumb.component';
+import { SwitchButtonsComponent } from './home/sneaker-image/switch-buttons/switch-buttons.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ImageThumbComponent } from './home/sneaker-image/image-thumb/image-thum
     SneakerImageComponent,
     SneakerCopyComponent,
     ImageModalComponent,
-    ImageThumbComponent
+    ImageThumbComponent,
+    SwitchButtonsComponent
   ],
   imports: [
     BrowserModule,

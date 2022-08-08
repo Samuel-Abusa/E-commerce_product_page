@@ -1,0 +1,17 @@
+.btns {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.carousel-btn {
+  border-radius: 50%;
+  height: 2.2rem;
+  width: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.carousel-btn img {
+  max-height: 0.7rem;
+}
