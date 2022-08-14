@@ -36,7 +36,7 @@ export class ImageThumbComponent implements AfterViewInit {
 
   selectImg(img: HTMLImageElement, thumbNail: HTMLDivElement) {
     this.imageService.currImage.next(img);
-    this.imageService.defaultImg.next(+this.imageService.getImgId(img.id));
+    this.imageService.defaultImg.next(+this.imageService.getImgId(img.id) + 1);
 
     this.clearActiveClass();
 
