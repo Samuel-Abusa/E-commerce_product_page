@@ -14,7 +14,10 @@ export class ImageModalComponent implements OnInit {
 
   ngOnInit(): void {
     this.imageService.currImage.subscribe(
-      (imgData) => (this.currentModalImage = `${+imgData.id + 1}`)
+      (imgData) =>
+        (this.currentModalImage = `${
+          +this.imageService.getImgId(imgData.id) + 1
+        }`)
     );
     this.imageService.switchImage.subscribe((data) => {
       this.currentModalImage = this.imageService.showImgSrcNumber(data);

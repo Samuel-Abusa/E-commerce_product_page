@@ -12,6 +12,10 @@ export class ImageService {
 
   constructor() {}
 
+  getImgId(id: string) {
+    return id.split('-')[1];
+  }
+
   showImgSrcNumber(src: string) {
     return src
       .split('/')

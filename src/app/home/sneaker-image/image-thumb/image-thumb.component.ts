@@ -35,6 +35,8 @@ export class ImageThumbComponent implements AfterViewInit {
 
     thumbNail.classList.add('active-img');
 
-    this.imageService.updateButtonWithThumbnail.next(+img.id + 1);
+    this.imageService.updateButtonWithThumbnail.next(
+      +this.imageService.getImgId(img.id) + 1
+    );
   }
 }

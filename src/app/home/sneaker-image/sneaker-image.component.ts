@@ -23,7 +23,7 @@ export class SneakerImageComponent implements OnInit, AfterViewInit {
     this.imageService.currImage.subscribe(
       (data) =>
         (this.mainSneakerImg = `../../assets/images/image-product-${
-          +data.id + 1
+          +this.imageService.getImgId(data.id) + 1
         }.jpg`)
     );
 
