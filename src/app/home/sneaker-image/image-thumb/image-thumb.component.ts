@@ -18,10 +18,16 @@ export class ImageThumbComponent implements AfterViewInit {
 
   constructor(private imageService: ImageService) {}
 
+  private clearActiveClass() {
+    this.thumbs!.forEach((el) => el.classList.remove('active-img'));
+  }
+
   ngAfterViewInit(): void {
     this.thumbs = [...this.container?.nativeElement.children];
 
     this.imageService.defaultImg.subscribe((data) => {
+      this.clearActiveClass();
+
       this.thumbs!.find((el) =>
         el.classList.contains(`img-${data}`)
       )?.classList.add('active-img');
@@ -30,8 +36,9 @@ export class ImageThumbComponent implements AfterViewInit {
 
   selectImg(img: HTMLImageElement, thumbNail: HTMLDivElement) {
     this.imageService.currImage.next(img);
+    this.imageService.defaultImg.next(+this.imageService.getImgId(img.id));
 
-    this.thumbs!.forEach((el) => el.classList.remove('active-img'));
+    this.clearActiveClass();
 
     thumbNail.classList.add('active-img');
 

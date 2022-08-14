@@ -44,5 +44,7 @@ export class SwitchButtonsComponent implements AfterViewInit {
     this.imageService.switchImage.next(
       `../../assets/images/image-product-${this.imgSelector}.jpg`
     );
+
+    this.imageService.defaultImg.next(this.imgSelector!);
   }
 }
